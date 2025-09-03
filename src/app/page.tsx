@@ -76,19 +76,12 @@ export default function Home() {
                         </button>
                     )}
                     <Link
-                        href="https://supabase.com/docs"
+                        href="/todos"
                         className="px-4 py-2 rounded-xl border border-zinc-700 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 transition-colors focus:outline-none focus:ring-2 focus:ring-zinc-600"
-                        target="_blank"
                     >
-                        Docs
+                        Todos
                     </Link>
                 </div>
-
-                <p className="text-xs text-zinc-500">
-                    Tailwind is set up. Edit{' '}
-                    <code className="text-zinc-300">src/app/page.tsx</code> to
-                    customize.
-                </p>
             </div>
         </main>
     );
