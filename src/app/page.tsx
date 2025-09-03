@@ -38,18 +38,21 @@ export default function Home() {
     };
 
     return (
-        <main className="min-h-screen flex items-center justify-center p-6 bg-gray-50">
-            <div className="w-full max-w-md rounded-2xl shadow p-6 bg-white space-y-4">
+        <main className="min-h-screen flex items-center justify-center p-6 bg-zinc-950 text-zinc-100">
+            <div className="w-full max-w-md rounded-2xl border border-zinc-800 bg-zinc-900/70 shadow p-6 space-y-4">
                 <h1 className="text-2xl font-semibold">
                     Next.js + Supabase Minimal
                 </h1>
-                <p className="text-sm text-gray-600">
+
+                <p className="text-sm text-zinc-400">
                     {loading ? (
                         'Checking session…'
                     ) : sessionEmail ? (
                         <>
                             Signed in as{' '}
-                            <span className="font-medium">{sessionEmail}</span>
+                            <span className="font-medium text-zinc-100">
+                                {sessionEmail}
+                            </span>
                         </>
                     ) : (
                         'You are signed out.'
@@ -60,29 +63,30 @@ export default function Home() {
                     {!sessionEmail ? (
                         <button
                             onClick={signInGithub}
-                            className="px-4 py-2 rounded-xl border hover:bg-gray-100"
+                            className="px-4 py-2 rounded-xl border border-zinc-700 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 transition-colors focus:outline-none focus:ring-2 focus:ring-zinc-600"
                         >
                             Sign in with GitHub
                         </button>
                     ) : (
                         <button
                             onClick={signOut}
-                            className="px-4 py-2 rounded-xl border hover:bg-gray-100"
+                            className="px-4 py-2 rounded-xl border border-zinc-700 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 transition-colors focus:outline-none focus:ring-2 focus:ring-zinc-600"
                         >
                             Sign out
                         </button>
                     )}
                     <Link
                         href="https://supabase.com/docs"
-                        className="px-4 py-2 rounded-xl border hover:bg-gray-100"
+                        className="px-4 py-2 rounded-xl border border-zinc-700 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 transition-colors focus:outline-none focus:ring-2 focus:ring-zinc-600"
                         target="_blank"
                     >
                         Docs
                     </Link>
                 </div>
 
-                <p className="text-xs text-gray-500">
-                    Tailwind is set up. Edit <code>src/app/page.tsx</code> to
+                <p className="text-xs text-zinc-500">
+                    Tailwind is set up. Edit{' '}
+                    <code className="text-zinc-300">src/app/page.tsx</code> to
                     customize.
                 </p>
             </div>
