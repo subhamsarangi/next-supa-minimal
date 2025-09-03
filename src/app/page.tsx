@@ -38,7 +38,7 @@ export default function Home() {
     };
 
     return (
-        <main className="min-h-screen flex items-center justify-center p-6 bg-zinc-950 text-zinc-100">
+        <main className="min-h-screen flex items-center justify-center p-6">
             <div className="w-full max-w-md rounded-2xl border border-zinc-800 bg-zinc-900/70 shadow p-6 space-y-4">
                 <h1 className="text-2xl font-semibold">
                     Next.js + Supabase Minimal

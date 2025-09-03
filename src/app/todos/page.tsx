@@ -51,7 +51,7 @@ export default function TodosPage() {
 
     if (!userId) {
         return (
-            <main className="min-h-screen flex items-center justify-center p-6 bg-zinc-950 text-zinc-100">
+            <main className="min-h-screen flex items-center justify-center p-6">
                 <div className="w-full max-w-md rounded-2xl border border-zinc-800 bg-zinc-900/70 shadow p-6">
                     <p className="mb-4 text-zinc-300">You’re signed out.</p>
                     <Link
@@ -66,7 +66,7 @@ export default function TodosPage() {
     }
 
     return (
-        <main className="min-h-screen flex items-center justify-center p-6 bg-zinc-950 text-zinc-100">
+        <main className="min-h-screen flex items-center justify-center p-6">
             <div className="w-full max-w-md rounded-2xl border border-zinc-800 bg-zinc-900/70 shadow p-6">
                 <h1 className="text-xl font-semibold mb-4">My Todos</h1>
                 <form onSubmit={addTodo} className="flex gap-2 mb-4">
