@@ -99,7 +99,12 @@ export default function TodosPage() {
                         </li>
                     ))}
                     {todos.length === 0 && (
-                        <p className="text-sm text-zinc-500">No todos yet.</p>
+                        <div className="animate-pulse space-y-2">
+                            {' '}
+                            <div className="h-13 bg-zinc-700/50 rounded-xl mx-auto" />{' '}
+                            <div className="h-13 bg-zinc-700/50 rounded-xl mx-auto" />{' '}
+                            <div className="h-13 bg-zinc-700/50 rounded-xl mx-auto" />{' '}
+                        </div>
                     )}
                 </ul>
             </div>
