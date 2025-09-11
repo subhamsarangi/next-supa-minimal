@@ -39,71 +39,75 @@ export default function Home() {
 
     return (
         <main className="min-h-screen flex items-center justify-center p-6">
-            {loading ? (
-                //  SKELETON LOADER
-                <div className="animate-pulse space-y-2">
-                    {' '}
-                    <div className="h-4 bg-zinc-700/50 rounded w-1/2 mx-auto" />{' '}
-                    <div className="h-4 bg-zinc-700/50 rounded w-1/3 mx-auto" />{' '}
-                </div>
-            ) : (
-                <div className="w-full max-w-md rounded-2xl border border-zinc-800 bg-zinc-900/70 shadow p-6 space-y-4">
-                    <h1 className="text-2xl font-semibold">
-                        Next.js + Supabase Minimal
-                    </h1>
-
-                    <p className="text-sm text-zinc-400">
-                        {sessionEmail ? (
-                            <>
-                                Signed in as{' '}
-                                <span className="font-medium text-zinc-100">
-                                    {sessionEmail}
-                                </span>
-                            </>
-                        ) : (
-                            'You are signed out.'
-                        )}
-                    </p>
-
-                    <div className="flex gap-3">
-                        {!sessionEmail ? (
-                            <button
-                                onClick={signInGithub}
-                                className="px-4 py-2 rounded-xl border border-zinc-700 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 transition-colors focus:outline-none focus:ring-2 focus:ring-zinc-600"
-                            >
-                                Sign in with GitHub
-                            </button>
-                        ) : (
-                            <button
-                                onClick={signOut}
-                                className="px-4 py-2 rounded-xl border border-zinc-700 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 transition-colors focus:outline-none focus:ring-2 focus:ring-zinc-600"
-                            >
-                                Sign out
-                            </button>
-                        )}
-                        <Link
-                            href="/todos"
-                            className="px-4 py-2 rounded-xl border border-zinc-700 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 transition-colors focus:outline-none focus:ring-2 focus:ring-zinc-600"
-                        >
-                            Todos
-                        </Link>
-
-                        <Link
-                            href="/time"
-                            className="px-4 py-2 rounded-xl border border-zinc-700 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 transition-colors focus:outline-none focus:ring-2 focus:ring-zinc-600"
-                        >
-                            Server Time
-                        </Link>
-
-                        <Link
-                            href="/time-client"
-                            className="px-4 py-2 rounded-xl border border-zinc-700 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 transition-colors focus:outline-none focus:ring-2 focus:ring-zinc-600"
-                        >
-                            Client Time
-                        </Link>
+            <div className="w-full max-w-md rounded-2xl border border-zinc-800 bg-zinc-900/70 shadow p-6 space-y-4">
+                <h1 className="text-2xl font-semibold">
+                    Next.js + Supabase Minimal
+                </h1>
+                {loading ? (
+                    //  SKELETON LOADER
+                    <div className="animate-pulse space-y-2">
+                        {' '}
+                        <div className="h-6 bg-zinc-700/50 rounded w-1/2 mx-auto" />{' '}
+                        <br />
+                        <div className="h-14 bg-zinc-700/50 rounded w-1/2 mx-auto" />{' '}
                     </div>
-                </div>
-            )}
+                ) : (
+                    <div>
+                        <p className="text-sm text-zinc-400">
+                            {sessionEmail ? (
+                                <>
+                                    Signed in as{' '}
+                                    <span className="font-medium text-zinc-100">
+                                        {sessionEmail}
+                                    </span>
+                                </>
+                            ) : (
+                                'You are signed out.'
+                            )}
+                        </p>
+
+                        <br />
+
+                        <div className="flex gap-3">
+                            {!sessionEmail ? (
+                                <button
+                                    onClick={signInGithub}
+                                    className="px-4 py-2 rounded-xl border border-zinc-700 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 transition-colors focus:outline-none focus:ring-2 focus:ring-zinc-600"
+                                >
+                                    Sign in with GitHub
+                                </button>
+                            ) : (
+                                <button
+                                    onClick={signOut}
+                                    className="px-4 py-2 rounded-xl border border-zinc-700 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 transition-colors focus:outline-none focus:ring-2 focus:ring-zinc-600"
+                                >
+                                    Sign out
+                                </button>
+                            )}
+                            <Link
+                                href="/todos"
+                                className="px-4 py-2 rounded-xl border border-zinc-700 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 transition-colors focus:outline-none focus:ring-2 focus:ring-zinc-600"
+                            >
+                                Todos
+                            </Link>
+
+                            <Link
+                                href="/time"
+                                className="px-4 py-2 rounded-xl border border-zinc-700 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 transition-colors focus:outline-none focus:ring-2 focus:ring-zinc-600"
+                            >
+                                Server Time
+                            </Link>
+
+                            <Link
+                                href="/time-client"
+                                className="px-4 py-2 rounded-xl border border-zinc-700 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 transition-colors focus:outline-none focus:ring-2 focus:ring-zinc-600"
+                            >
+                                Client Time
+                            </Link>
+                        </div>
+                    </div>
+                )}
+            </div>
         </main>
     );
 }
