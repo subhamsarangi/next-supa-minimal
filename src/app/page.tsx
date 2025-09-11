@@ -81,6 +81,20 @@ export default function Home() {
                     >
                         Todos
                     </Link>
+
+                    <Link
+                        href="/time"
+                        className="px-4 py-2 rounded-xl border border-zinc-700 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 transition-colors focus:outline-none focus:ring-2 focus:ring-zinc-600"
+                    >
+                        Server Time
+                    </Link>
+
+                    <Link
+                        href="/time-client"
+                        className="px-4 py-2 rounded-xl border border-zinc-700 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 transition-colors focus:outline-none focus:ring-2 focus:ring-zinc-600"
+                    >
+                        Client Time
+                    </Link>
                 </div>
             </div>
         </main>
